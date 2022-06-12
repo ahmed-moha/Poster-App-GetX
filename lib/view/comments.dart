@@ -57,7 +57,7 @@ class CommentsView extends StatelessWidget {
                         IconlyLight.send,
                         color: kPrimaryColor,
                       ))),
-            ),
+            ), 
           ),
         ],
       ),

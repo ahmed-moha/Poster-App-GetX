@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:poster_app/constants.dart';
 import 'package:poster_app/controllers/login_controller.dart';
+import 'package:poster_app/view/add_post.dart';
 
 import '../controllers/home_controller.dart';
 import '../widgets/posts_card.dart';
@@ -14,6 +15,7 @@ class Home extends StatelessWidget {
   final login = Get.put(LoginController());
   @override
   Widget build(BuildContext context) {
+    print(controller.user.user.sId);
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
@@ -79,7 +81,9 @@ class Home extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> AddPostView()));
+        },
         backgroundColor: kPrimaryColor,
         child: const Icon(IconlyLight.paper_upload),
       ),
